@@ -1,0 +1,11 @@
+8 x 0 es igual: 0
+8 x 1 es igual: 8
+8 x 2 es igual: 16
+8 x 3 es igual: 24
+8 x 4 es igual: 32
+8 x 5 es igual: 40
+8 x 6 es igual: 48
+8 x 7 es igual: 56
+8 x 8 es igual: 64
+8 x 9 es igual: 72
+8 x 10 es igual: 80
