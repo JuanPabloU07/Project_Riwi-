@@ -1,7 +1,10 @@
+# Import the file containing the list (5)
 inventary = []
 
+# A variable is created that is defined as a list
 sales_history = []
 
+# Interactive menus are created with functions, conditionals, and loops 
 def main_menu():
     while True:
         print("\n----- Menu principal -----")
@@ -11,7 +14,7 @@ def main_menu():
         print("4. Reportes")
         print("5. Salir")
         option = input("Elige una opción: ")
-
+        
         if option == "1":
             inventory_menu()
         elif option == "2":
@@ -25,7 +28,6 @@ def main_menu():
             break
         else:
             print("Opción no válida.")
-
 
 def inventory_menu():
     while True:
@@ -73,6 +75,7 @@ def reports_menu():
             print("Opción no válida.")
 
 
+# This function verifies whether integers and floating point numbers are valid.
 def input_int(num_int):
     while True:
         try:
@@ -89,10 +92,12 @@ def input_float(num_float):
         except ValueError:
             print("Entrada no válida. Ingresa un número válido.")
 
+# A function is defined to search the inventory for the name of the book, and .lower is added to return it in lowercase.
 def search_book(title):
     return next((p for p in inventary if p["title"].lower() == title.lower()), None)
 
 
+# The .strip method removes characters at the beginning and end.
 def register_book():
     print("\n--- Registrar nuevo libro ---")
 
@@ -228,7 +233,8 @@ def view_sales_history():
               f"Bruto: ${s['bruto']:.2f} | Neto: ${s['neto']:.2f}")
 
 
-
+# A report of the books is defined and sorted is added to it so that it gives me an ordered list and 
+# lambda is added to define an anonymous function 
 def report_top_books():
     print("\n--- TOP 3 libros mas vendidos ---")
     books_sorted = sorted(inventary, key=lambda p: p["sales"], reverse=True)
